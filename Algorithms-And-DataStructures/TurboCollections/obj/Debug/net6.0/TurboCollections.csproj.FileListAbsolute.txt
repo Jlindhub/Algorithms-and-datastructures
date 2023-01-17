@@ -10,3 +10,15 @@ E:\unityprojects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataS
 E:\unityprojects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\refint\TurboCollections.dll
 E:\unityprojects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.pdb
 E:\unityprojects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\ref\TurboCollections.dll
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\bin\Debug\net6.0\TurboCollections.deps.json
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\bin\Debug\net6.0\TurboCollections.dll
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\bin\Debug\net6.0\TurboCollections.pdb
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.csproj.AssemblyReference.cache
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.AssemblyInfoInputs.cache
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.AssemblyInfo.cs
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.csproj.CoreCompileInputs.cache
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.dll
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\refint\TurboCollections.dll
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.pdb
+C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\ref\TurboCollections.dll
