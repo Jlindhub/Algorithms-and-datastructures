@@ -20,4 +20,4 @@ for (int i = 0; i < arrayList.Count; i++)
 }
 /* thoughts:
 it feels wrong to use for loops to utilize lists, when a foreach or a
- while loopor utilizing the pointer would be cleaner comparatively. */
+ while loop or utilizing the pointer would be cleaner comparatively. */
