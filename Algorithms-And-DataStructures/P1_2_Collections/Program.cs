@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 
 List<int> list = new List<int>{ 137, 1000, -200 };
 for (int i=0; i < list.Count; i++) { Console.WriteLine(list[i]); }

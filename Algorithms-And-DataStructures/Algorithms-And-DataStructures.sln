@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboCollections.Test", "Tu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1_2_Collections", "P1_2_Collections\P1_2_Collections.csproj", "{B92464E4-B128-45B5-B7F1-A8BBC2EEFFE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1_3_Iterator", "P1_3_Iterator\P1_3_Iterator.csproj", "{7B60A7BD-3159-402E-86FC-FE95D71B97A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +30,9 @@ Global
 		{B92464E4-B128-45B5-B7F1-A8BBC2EEFFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B92464E4-B128-45B5-B7F1-A8BBC2EEFFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B92464E4-B128-45B5-B7F1-A8BBC2EEFFE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B60A7BD-3159-402E-86FC-FE95D71B97A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B60A7BD-3159-402E-86FC-FE95D71B97A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B60A7BD-3159-402E-86FC-FE95D71B97A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B60A7BD-3159-402E-86FC-FE95D71B97A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
