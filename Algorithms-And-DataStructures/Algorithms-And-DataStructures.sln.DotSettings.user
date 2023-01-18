@@ -2,6 +2,8 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ed795908_002Dd789_002D44c6_002Da5cf_002D3893b0c8bd3f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SayHelloExists" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.MathsTests.SayHelloExists&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.ItFollowsLIFO&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.AddedItemsAreEnumerable&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Forstbergs/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

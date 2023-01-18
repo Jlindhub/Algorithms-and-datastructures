@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj": {}
+    "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj": {
+    "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj",
-        "packagesPath": "C:\\Users\\gmrgo\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\obj\\",
+        "projectPath": "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\HelloWorld.csproj",
+        "packagesPath": "C:\\Users\\MagniModi\\.nuget\\packages\\",
+        "outputPath": "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gmrgo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MagniModi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj": {
-                "projectPath": "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj"
+              "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj": {
+                "projectPath": "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj"
               }
             }
           }
@@ -61,17 +61,17 @@
         }
       }
     },
-    "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj": {
+    "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj",
+        "projectUniqueName": "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj",
         "projectName": "TurboCollections",
-        "projectPath": "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj",
-        "packagesPath": "C:\\Users\\gmrgo\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\obj\\",
+        "projectPath": "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\TurboCollections.csproj",
+        "packagesPath": "C:\\Users\\MagniModi\\.nuget\\packages\\",
+        "outputPath": "E:\\unityprojects\\201-algorithms-and-datastructures-Jlindhub\\Algorithms-And-DataStructures\\TurboCollections\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gmrgo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MagniModi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

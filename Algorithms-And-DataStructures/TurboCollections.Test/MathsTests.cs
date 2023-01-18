@@ -8,4 +8,14 @@ public class MathsTests
     {
         TurboMaths.SayHello();
     }
+
+    [Test]
+    public void OddNumbersWithYieldWorks()
+    {
+    }
+
+    [Test]
+    public void OddNumbersWithListWorks()
+    {
+    }
 }
