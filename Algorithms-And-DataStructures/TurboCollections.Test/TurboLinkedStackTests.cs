@@ -31,5 +31,29 @@ public class TurboLinkedStackTests
         CollectionAssert.AreEqual(stack, new []{12,100,10});
 
     }
-    
+
+    [Test]
+    public void ClearCustomers()
+    {
+        var stack = new TurboLinkedStack<int>();
+        stack.Push(10);
+        stack.Push(100);
+        stack.Push(12);
+        Assert.That(stack.Peek(), Is.EqualTo(12));
+        stack.Clear();
+    }
+
+    [Test]
+    public void CountNodes()
+    {
+        var stack = new TurboLinkedStack<int>();
+        stack.Push(10);
+        stack.Push(100);
+        stack.Push(12);
+        stack.Push(10);
+        stack.Push(100);
+        stack.Push(12);
+        Assert.That(stack.Count(), Is.EqualTo(6));
+    }
+
 }

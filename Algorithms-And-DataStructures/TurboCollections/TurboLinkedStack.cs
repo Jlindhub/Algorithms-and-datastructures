@@ -1,5 +1,4 @@
 using System.Collections;
-
 namespace TurboCollections;
 
 public class TurboLinkedStack<T> : IEnumerable<T> //brackets for generic class, should be named ICollection
@@ -12,12 +11,25 @@ public class TurboLinkedStack<T> : IEnumerable<T> //brackets for generic class, 
     Node lastNode;
 
    public void Push(T item) { lastNode = new Node { Value = item, Previous = lastNode }; }
-   public T Pop() { var node = lastNode; lastNode = node.Previous; return node.Value; } 
+   public T Pop() { var node = lastNode; lastNode = node.Previous; return node.Value; }
+
    public T Peek() { var node = lastNode; return node.Value; }
-    
-    
-    
-    public IEnumerator<T> GetEnumerator()
+   public void Clear() { lastNode = null; }
+
+   public int Count()
+   {
+       int count = 0;
+       Node currentNode = lastNode;
+       while (currentNode != null)
+       {
+           count++;
+           currentNode = currentNode.Previous;
+       }
+
+       return count;
+   }
+
+   public IEnumerator<T> GetEnumerator()
     { return new Enumerator(lastNode); }
 
     IEnumerator IEnumerable.GetEnumerator()
