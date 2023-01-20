@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P1_3_Iterator", "P1_3_Itera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStateHistory", "GameStateHistory\GameStateHistory.csproj", "{5B5F87F4-4525-4098-B139-2719581ACD56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongQueue", "SongQueue\SongQueue.csproj", "{5285E987-D611-472E-A9D6-08774471F4FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,5 +42,9 @@ Global
 		{5B5F87F4-4525-4098-B139-2719581ACD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B5F87F4-4525-4098-B139-2719581ACD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B5F87F4-4525-4098-B139-2719581ACD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5285E987-D611-472E-A9D6-08774471F4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5285E987-D611-472E-A9D6-08774471F4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5285E987-D611-472E-A9D6-08774471F4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5285E987-D611-472E-A9D6-08774471F4FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
