@@ -5,30 +5,31 @@ public class TurboLinkedStack<T> : IEnumerable<T> //brackets for generic class, 
 {
     private class Node
     {
-        public T Value;
-        public Node Previous;
+        public T? Value;
+        public Node? Previous;
     }
-    Node lastNode;
-    public int Count;
-    public void Push(T item) { lastNode = new Node { Value = item, Previous = lastNode }; Count++;
-    }
-   public T Pop() { var node = lastNode; lastNode = node.Previous; Count--; return node.Value;  }
 
-   public T Peek() { var node = lastNode; return node.Value; }
-   public void Clear() { lastNode = null; Count = 0; }
+    private Node? _lastNode;
+    public int Count;
+    public void Push(T item) { _lastNode = new Node { Value = item, Previous = _lastNode }; Count++;
+    }
+   public T Pop() { var node = _lastNode; _lastNode = node!.Previous; Count--; return node.Value!;  }
+
+   public T Peek() { var node = _lastNode; return node!.Value!; }
+   public void Clear() { _lastNode = null; Count = 0; }
 
    public IEnumerator<T> GetEnumerator()
-    { return new Enumerator(lastNode); }
+    { return new Enumerator(_lastNode!); }
 
     IEnumerator IEnumerable.GetEnumerator()
     { return GetEnumerator(); }
 
     private class Enumerator : IEnumerator<T> //advanced stuff, i don't 100% understand it yet
     {
-        private Node _firstNode;
-        private Node _currentNode;
+        private Node? _firstNode;
+        private Node? _currentNode;
 
-        public Enumerator(Node firstNode) { _firstNode = firstNode; }
+        public Enumerator(Node? firstNode) { _firstNode = firstNode; }
         
         public bool MoveNext()
         {
@@ -42,9 +43,9 @@ public class TurboLinkedStack<T> : IEnumerable<T> //brackets for generic class, 
             _currentNode = null;
         }
 
-        public T Current => _currentNode.Value;
+        public T Current => _currentNode!.Value!;
 
-        object IEnumerator.Current => Current;
+        object IEnumerator.Current => Current!;
 
         public void Dispose() { }
     }

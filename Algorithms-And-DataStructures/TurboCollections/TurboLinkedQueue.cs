@@ -5,48 +5,48 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
 {
     class Node
     {
-        public T Value;
-        public Node Next;
+        public T? Value;
+        public Node? Next;
     }
-    private Node FirstinLine;
-    private Node LastinLine;
-    private int newcount;
-    public int count => newcount;
+    private Node? _firstInLine;
+    private Node? _lastInLine;
+    private int _newCount;
+    public int count => _newCount;
 
     public void Enqueue(T item) {
 
-        if (FirstinLine == null) {
+        if (_firstInLine == null) {
             var node = new Node { Value = item };
-            FirstinLine = node;
-            LastinLine = node;
+            _firstInLine = node;
+            _lastInLine = node;
         }
         else {
-            var node = LastinLine;
-            node.Next = new Node { Value = item };
-            LastinLine = node.Next;
+            var node = _lastInLine;
+            node!.Next = new Node { Value = item };
+            _lastInLine = node.Next;
         }
-        newcount++;
+        _newCount++;
     }
 
     public T Peek() {
-        var node = FirstinLine; 
-        return node.Value; 
+        var node = _firstInLine; 
+        return node!.Value!; 
     }
 
     public T Dequeue() {
-        var node = FirstinLine;
-        FirstinLine = FirstinLine.Next;
-        newcount--;
-        return node.Value;
+        var node = _firstInLine;
+        _firstInLine = _firstInLine!.Next;
+        _newCount--;
+        return node!.Value!;
     }
 
     public void Clear()
-    { FirstinLine = null; newcount = 0; }
+    { _firstInLine = null; _newCount = 0; }
     
     
     public IEnumerator<T> GetEnumerator()
     {
-        return new Enumerator(FirstinLine);
+        return new Enumerator(_firstInLine);
     }
 
     IEnumerator IEnumerable.GetEnumerator()
@@ -55,10 +55,10 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
     }
     private class Enumerator : IEnumerator<T> //advanced stuff, i don't 100% understand it yet
     {
-        private Node _firstNode;
-        private Node _currentNode;
+        private Node? _firstNode;
+        private Node? _currentNode;
 
-        public Enumerator(Node firstNode) { _firstNode = firstNode; }
+        public Enumerator(Node? firstNode) { _firstNode = firstNode; }
         
         public bool MoveNext()
         {
@@ -72,21 +72,9 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
             _currentNode = null;
         }
 
-        public T Current => _currentNode.Value;
-        object IEnumerator.Current => Current;
+        public T Current => _currentNode!.Value!;
+        object IEnumerator.Current => Current!;
         public void Dispose() { }
     }
-
-}
-public interface ITurboQueue<T> : IEnumerable<T>
-{
-  
-    public int count { get; }
-
-
-    void Enqueue(T item);
-    T Peek();
-    T Dequeue();
-    void Clear();
 
 }
