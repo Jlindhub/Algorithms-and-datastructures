@@ -57,5 +57,20 @@ public class TurboLinkedStackTests
         stack.Push(12);
         Assert.That(stack.Count(), Is.EqualTo(6));
     }
+    [Test]
+    public void SomeTest(){
+        TurboLinkedStack<int> stack = new TurboLinkedStack<int>();
+        Assert.Throws<InvalidOperationException>(()=>stack.Peek());
+    }
+
+    class Hero{}
+    [Test]
+    public void SeeNull()
+    {
+        TurboLinkedStack<Hero?> heroes = new TurboLinkedStack<Hero?>();
+        heroes.Push(new Hero());
+        heroes.Push(null);
+        Assert.That(heroes.Pop(), Is.Null);
+    }
 
 }

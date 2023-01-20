@@ -22,22 +22,24 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
         }
         else {
             var node = _lastInLine;
-            node!.Next = new Node { Value = item };
+            node.Next = new Node { Value = item };
             _lastInLine = node.Next;
         }
         _newCount++;
     }
 
     public T Peek() {
+        if(_firstInLine == null){ throw new InvalidOperationException("Please make Sure that the Stack is not Empty!"); }
         var node = _firstInLine; 
-        return node!.Value!; 
+        return node.Value; 
     }
 
     public T Dequeue() {
+        if(_firstInLine == null){ throw new InvalidOperationException("Please make Sure that the Stack is not Empty!"); }
         var node = _firstInLine;
-        _firstInLine = _firstInLine!.Next;
+        _firstInLine = _firstInLine.Next;
         _newCount--;
-        return node!.Value!;
+        return node.Value;
     }
 
     public void Clear()
@@ -72,8 +74,8 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
             _currentNode = null;
         }
 
-        public T Current => _currentNode!.Value!;
-        object IEnumerator.Current => Current!;
+        public T Current => _currentNode.Value;
+        object IEnumerator.Current => Current;
         public void Dispose() { }
     }
 

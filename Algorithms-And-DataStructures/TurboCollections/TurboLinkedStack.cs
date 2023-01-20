@@ -5,21 +5,41 @@ public class TurboLinkedStack<T> : IEnumerable<T> //brackets for generic class, 
 {
     private class Node
     {
-        public T? Value;
+        public T Value;
         public Node? Previous;
+
+        public Node(T value, Node? previous)
+        {
+            Value = value;
+            Previous = previous;
+        }
     }
 
     private Node? _lastNode;
     public int Count;
-    public void Push(T item) { _lastNode = new Node { Value = item, Previous = _lastNode }; Count++;
+    public void Push(T item) { _lastNode = new Node(item,_lastNode ); Count++;
     }
-   public T Pop() { var node = _lastNode; _lastNode = node!.Previous; Count--; return node.Value!;  }
 
-   public T Peek() { var node = _lastNode; return node!.Value!; }
+    public T Pop()
+    {
+        if(_lastNode == null){ throw new InvalidOperationException("Please make Sure that the Stack is not Empty!"); }
+        var node = _lastNode;
+        _lastNode = node.Previous;
+        Count--;
+        return node.Value;
+    }
+
+    public T Peek()
+    {
+        if(_lastNode == null){ throw new InvalidOperationException("Please make Sure that the Stack is not Empty!"); }
+        var node = _lastNode; 
+        return node.Value;
+
+    }
    public void Clear() { _lastNode = null; Count = 0; }
 
    public IEnumerator<T> GetEnumerator()
-    { return new Enumerator(_lastNode!); }
+    { return new Enumerator(_lastNode); }
 
     IEnumerator IEnumerable.GetEnumerator()
     { return GetEnumerator(); }
@@ -43,9 +63,15 @@ public class TurboLinkedStack<T> : IEnumerable<T> //brackets for generic class, 
             _currentNode = null;
         }
 
-        public T Current => _currentNode!.Value!;
+        public T Current
+        {
+            get {
+                if (_currentNode != null) return _currentNode.Value;
+                throw new InvalidOperationException("Please make Sure that the Stack is not Empty!");
+            }
+        }
 
-        object IEnumerator.Current => Current!;
+        object? IEnumerator.Current => Current;
 
         public void Dispose() { }
     }
