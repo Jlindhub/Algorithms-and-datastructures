@@ -1,13 +1,33 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ed795908_002Dd789_002D44c6_002Da5cf_002D3893b0c8bd3f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SayHelloExists" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.MathsTests.SayHelloExists&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.ItFollowsLIFO&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.AddedItemsAreEnumerable&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.MathsTests.OddNumbersWithListWorks&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.MathsTests.OddNumbersWithYieldWorks&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.ClearCustomers&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.CountNodes&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.MathsTests.SayHelloExists&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.ItFollowsLIFO&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.AddedItemsAreEnumerable&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.MathsTests.OddNumbersWithListWorks&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.MathsTests.OddNumbersWithYieldWorks&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.ClearCustomers&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.CountNodes&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboQueueTests.ItFollowsFIFO&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboQueueTests.AddedItemsAreEnumerable&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboQueueTests.CountNodes&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Not&gt;&#xD;
+        &lt;And&gt;&#xD;
+          &lt;TestAncestor&gt;&#xD;
+            &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests&lt;/TestId&gt;&#xD;
+          &lt;/TestAncestor&gt;&#xD;
+          &lt;Project Location="E:\unityprojects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections.Test" Presentation="&amp;lt;TurboCollections.Test&amp;gt;" /&gt;&#xD;
+          &lt;Namespace&gt;TurboCollections.Test&lt;/Namespace&gt;&#xD;
+        &lt;/And&gt;&#xD;
+      &lt;/Not&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboLinkedStackTests.ClearCustomers&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TurboQueueTests.ClearQueue&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=Forstbergs/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

@@ -41,6 +41,8 @@ public class TurboLinkedStackTests
         stack.Push(12);
         Assert.That(stack.Peek(), Is.EqualTo(12));
         stack.Clear();
+        Assert.That(stack, Is.Empty);
+
     }
 
     [Test]
