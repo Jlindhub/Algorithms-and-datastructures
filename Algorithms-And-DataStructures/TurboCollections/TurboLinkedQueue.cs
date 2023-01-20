@@ -5,8 +5,13 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
 {
     class Node
     {
-        public T? Value;
+        public T Value;
         public Node? Next;
+        public Node(T value, Node? next)
+        {
+            Value = value;
+            Next = next;
+        }
     }
     private Node? _firstInLine;
     private Node? _lastInLine;
@@ -16,13 +21,13 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
     public void Enqueue(T item) {
 
         if (_firstInLine == null) {
-            var node = new Node { Value = item };
+            var node = new Node(item,null);
             _firstInLine = node;
             _lastInLine = node;
         }
         else {
             var node = _lastInLine;
-            node.Next = new Node { Value = item };
+            node!.Next = new Node(item,null); //null suppressed - if/else covers it.
             _lastInLine = node.Next;
         }
         _newCount++;
@@ -74,8 +79,14 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
             _currentNode = null;
         }
 
-        public T Current => _currentNode.Value;
-        object IEnumerator.Current => Current;
+        public T Current
+        {
+            get {
+                if (_currentNode != null) return _currentNode.Value;
+                throw new InvalidOperationException("Please make Sure that the Stack is not Empty!");
+            }
+        }
+        object? IEnumerator.Current => Current;
         public void Dispose() { }
     }
 

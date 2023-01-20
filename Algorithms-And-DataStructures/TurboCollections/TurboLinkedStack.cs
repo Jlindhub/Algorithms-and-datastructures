@@ -1,7 +1,7 @@
 using System.Collections;
 namespace TurboCollections;
 
-public class TurboLinkedStack<T> : IEnumerable<T> //brackets for generic class, should be named ICollection
+public class TurboLinkedStack<T> : IEnumerable<T> 
 {
     private class Node
     {
