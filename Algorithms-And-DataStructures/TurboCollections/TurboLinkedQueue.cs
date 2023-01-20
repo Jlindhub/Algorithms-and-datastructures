@@ -10,21 +10,9 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
     }
     private Node FirstinLine;
     private Node LastinLine;
-    
-    public int count => Count();
+    private int newcount;
+    public int count => newcount;
 
-    public int Count()
-    {
-        int countInternal = 0;
-        Node currentNode = FirstinLine;
-        while (currentNode != null) {
-            countInternal++;
-            currentNode = currentNode.Next;
-        }
-
-        return countInternal;
-    }
-    
     public void Enqueue(T item) {
 
         if (FirstinLine == null) {
@@ -37,7 +25,7 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
             node.Next = new Node { Value = item };
             LastinLine = node.Next;
         }
-        
+        newcount++;
     }
 
     public T Peek() {
@@ -48,11 +36,12 @@ public class TurboLinkedQueue<T> : ITurboQueue<T>
     public T Dequeue() {
         var node = FirstinLine;
         FirstinLine = FirstinLine.Next;
+        newcount--;
         return node.Value;
     }
 
     public void Clear()
-    { FirstinLine = null; }
+    { FirstinLine = null; newcount = 0; }
     
     
     public IEnumerator<T> GetEnumerator()
