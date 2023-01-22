@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStateHistory", "GameSta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongQueue", "SongQueue\SongQueue.csproj", "{5285E987-D611-472E-A9D6-08774471F4FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManager", "CustomerManager\CustomerManager.csproj", "{0757A941-24E4-4FA1-9BFA-07A366E035C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,5 +48,9 @@ Global
 		{5285E987-D611-472E-A9D6-08774471F4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5285E987-D611-472E-A9D6-08774471F4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5285E987-D611-472E-A9D6-08774471F4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0757A941-24E4-4FA1-9BFA-07A366E035C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0757A941-24E4-4FA1-9BFA-07A366E035C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0757A941-24E4-4FA1-9BFA-07A366E035C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0757A941-24E4-4FA1-9BFA-07A366E035C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

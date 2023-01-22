@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TurboCollections.Test\TurboCollections.Test.csproj" />
       <ProjectReference Include="..\TurboCollections\TurboCollections.csproj" />
     </ItemGroup>
 
