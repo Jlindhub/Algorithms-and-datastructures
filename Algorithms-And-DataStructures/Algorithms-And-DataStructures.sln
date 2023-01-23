@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongQueue", "SongQueue\Song
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManager", "CustomerManager\CustomerManager.csproj", "{0757A941-24E4-4FA1-9BFA-07A366E035C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p202-1-averaging", "p202-1-averaging\p202-1-averaging.csproj", "{0DEF1A5D-B99A-43AA-96A0-A6BF9E6952D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2_1_Algorithms", "P2_1_Algorithms\P2_1_Algorithms.csproj", "{0DEF1A5D-B99A-43AA-96A0-A6BF9E6952D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
