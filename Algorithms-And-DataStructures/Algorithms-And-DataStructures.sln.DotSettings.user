@@ -46,6 +46,7 @@
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.FibonacciTest.fibonacci&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.FibonacciTest.FibonacciRecursive&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.FibonacciTest.FibonacciIterative&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.SortingTests.SelectionSort&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
