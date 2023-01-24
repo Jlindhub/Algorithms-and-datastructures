@@ -6,9 +6,6 @@ public static class TurboSort
 {
     public static void SelectionSort(TurboLinkedList<int> list)
     {
-        Stopwatch stopwatch = new Stopwatch();
-        stopwatch.Start();
-        
         for (int i = 0; i < list.Count - 2; i++)
         {
             int min = i; //keeps track of index point for current min value
@@ -25,8 +22,6 @@ public static class TurboSort
                 list.Set(min,holder); //min.value = (old) i.value
             }
         }
-
-        Console.WriteLine($"runtime: {stopwatch.ElapsedMilliseconds}");
     }
     
     
