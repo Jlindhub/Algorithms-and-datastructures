@@ -6,7 +6,7 @@ public static class TurboSort
 {
     public static void SelectionSort(TurboLinkedList<int> list)
     {
-        for (int i = 0; i < list.Count - 2; i++)
+        for (int i = 0; i < list.Count - 1; i++)
         {
             int min = i; //keeps track of index point for current min value
             
