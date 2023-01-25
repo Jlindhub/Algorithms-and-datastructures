@@ -2,7 +2,7 @@ using System.Diagnostics;
 
 namespace TurboCollections;
 
-public static class TurboSort
+public static partial class TurboSort
 {
     public static void SelectionSort(TurboLinkedList<int> list)
     {
