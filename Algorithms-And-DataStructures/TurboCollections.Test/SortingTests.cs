@@ -101,6 +101,6 @@ public class SortingTests
         Console.WriteLine(stopwatch.Elapsed);
         CollectionAssert.IsOrdered(listToSort);
         for(int i=0; i<listToSort.Count; i++){ Console.Write(listToSort.Get(i) + " "); }
-        //average stopwatch time for 1k list (random): 1.9ms
+        //average stopwatch time for 1k list (random): 2ms
     }
 }
