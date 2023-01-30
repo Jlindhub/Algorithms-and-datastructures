@@ -34,7 +34,16 @@ public class TurboLinkedList<T> : ITurboList<T>
         }
         Count++;
     }
-
+    public void InsertAfter(int index, T value)
+    {
+        if (index >= Count)
+        { throw new InvalidOperationException("Requested index is greater than list length!"); }
+        var node = _firstNode;
+        for(int i=0; i<index; i++) { node = node?.Next; }
+        Node newNode = new Node(value, node!.Next);
+        node.Next = newNode;
+        Count++;
+    }
     public T Get(int index)
     {
         if (index >= Count) { throw new InvalidOperationException("Requested index is greater than list length!"); }
@@ -51,6 +60,8 @@ public class TurboLinkedList<T> : ITurboList<T>
         for(int i=0; i<index; i++) { node = node?.Next; }
         node!.Value = value;
     }
+
+    
 
     public void Clear()
     {

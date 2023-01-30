@@ -42,10 +42,10 @@ public class SearchTests
     [Test]
     public void BinaryTest()
     {
-        TurboLinkedList<int> listToSearch = new TurboLinkedList<int> { 5, 9, 2, 4, 6, 1 };
+        TurboLinkedList<int> listToSearch = new TurboLinkedList<int> { 1, 2, 4, 5, 6, 9 };
         Stopwatch stopwatch = new Stopwatch(); 
         stopwatch.Start(); 
-        Assert.That(Search.BinarySearch(listToSearch, 4), Is.EqualTo(3));
+        Assert.That(Search.BinarySearch(listToSearch, 4), Is.EqualTo(2));
         stopwatch.Stop(); 
         Console.WriteLine(stopwatch.Elapsed);
         Assert.That(Search.BinarySearch(listToSearch, 111111111), Is.EqualTo(-1));  //check for 'not found'
@@ -57,7 +57,7 @@ public class SearchTests
     public void BinaryLargeTest()
     {
         int[] HugeList = new int[1000]; //fixed list size
-        for (int i = 0; i < HugeList.Length; i++) { HugeList[i] =i;} //populate list, fixed numerals 0-999
+        for (int i = 0; i < HugeList.Length; i++) { HugeList[i] =i;} //populate list, fixed numerals 0-999, pre-sorted
         TurboLinkedList<int> listToSearch = new TurboLinkedList<int>();
         listToSearch.AddRange(HugeList);
         
@@ -71,5 +71,18 @@ public class SearchTests
         Assert.That(Search.BinarySearch(listToSearch, 111111111), Is.EqualTo(-1)); //check for 'not found'
         Console.WriteLine(stopwatch.Elapsed);
         //average time for 1k test, targeting magic number that seems annoying to find: 0.001ms
+    }
+
+    [Test]
+    public void Insertion()
+    {
+        TurboLinkedList<int> listToSearch = new TurboLinkedList<int> { 1, 2, 4, 5, 6, 9 };
+        SortedInsertion.SortInsert(listToSearch, 5);
+        SortedInsertion.SortInsert(listToSearch, 8);
+        Assert.That(listToSearch.Get(3), Is.EqualTo(5));
+        Assert.That(listToSearch.Get(4), Is.EqualTo(5));
+        Assert.That(listToSearch.Get(6), Is.EqualTo(8));
+        CollectionAssert.IsOrdered(listToSearch);
+
     }
 }
