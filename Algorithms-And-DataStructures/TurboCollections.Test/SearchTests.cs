@@ -68,7 +68,7 @@ public class SearchTests
         stopwatch.Stop();
         int integratedResult = listToSearch.IndexOf(target); //comparator result
         Assert.That(searchResult == integratedResult);
-        Assert.That(searchResult == 855);
+        Assert.That(searchResult == target);
         Assert.That(Search.BinarySearch(listToSearch, 111111111), Is.EqualTo(-1)); //check for 'not found'
         Console.WriteLine(stopwatch.Elapsed);
         //average time for 1k test, targeting random number: 0.001ms
