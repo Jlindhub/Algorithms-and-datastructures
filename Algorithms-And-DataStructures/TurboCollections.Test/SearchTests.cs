@@ -60,17 +60,18 @@ public class SearchTests
         for (int i = 0; i < HugeList.Length; i++) { HugeList[i] =i;} //populate list, fixed numerals 0-999, pre-sorted
         TurboLinkedList<int> listToSearch = new TurboLinkedList<int>();
         listToSearch.AddRange(HugeList);
-        
+        Random random = new Random();
+        int target = random.Next(0, 999);
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
-        int searchResult = Search.BinarySearch(listToSearch,855); //cached to int for stopwatch accuracy
+        int searchResult = Search.BinarySearch(listToSearch,target); //cached to int for stopwatch accuracy
         stopwatch.Stop();
-        int integratedResult = listToSearch.IndexOf(855); //comparator result
+        int integratedResult = listToSearch.IndexOf(target); //comparator result
         Assert.That(searchResult == integratedResult);
         Assert.That(searchResult == 855);
         Assert.That(Search.BinarySearch(listToSearch, 111111111), Is.EqualTo(-1)); //check for 'not found'
         Console.WriteLine(stopwatch.Elapsed);
-        //average time for 1k test, targeting magic number that seems annoying to find: 0.001ms
+        //average time for 1k test, targeting random number: 0.001ms
     }
 
     [Test]
