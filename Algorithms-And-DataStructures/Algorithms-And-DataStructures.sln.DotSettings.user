@@ -68,6 +68,12 @@
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeNormalOrder&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeReverseOrder&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.CloningTrees&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.HashingTests.InsertTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.HashingTests.DuplicateInsert&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.HashingTests.ContainRemoveAndEnumerate&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.HashingTests.DictAdd&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.HashingTests.DictContains&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.HashingTests.DictGetSetRemove&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
