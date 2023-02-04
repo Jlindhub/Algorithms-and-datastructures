@@ -58,6 +58,16 @@
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.SearchTests.BinaryTest&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.SearchTests.BinaryLargeTest&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.SearchTests.Insertion&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.searchtreeSearches&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.transversal&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.simpletree&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeInsertAndSearch&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeDeleteNode&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeSmallToLargeTraversal&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeTraversal&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeNormalOrder&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.SimpleTreeReverseOrder&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::259F18E5-662F-483E-AEA4-06A0055BCC88::net6.0::TurboCollections.Test.TreeTest.CloningTrees&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>

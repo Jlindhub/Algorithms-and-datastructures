@@ -22,3 +22,4 @@ C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStruct
 C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\refint\TurboCollections.dll
 C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.pdb
 C:\Projects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\ref\TurboCollections.dll
+E:\unityprojects\201-algorithms-and-datastructures-Jlindhub\Algorithms-And-DataStructures\TurboCollections\obj\Debug\net6.0\TurboCollections.csproj.CopyComplete

@@ -5,19 +5,3 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {
-      "TurboCollections/1.0.0": {
-        "runtime": {
-          "TurboCollections.dll": {}
-        }
-      }
-    }
-  },
-  "libraries": {
-    "TurboCollections/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    }
-  }
-}
