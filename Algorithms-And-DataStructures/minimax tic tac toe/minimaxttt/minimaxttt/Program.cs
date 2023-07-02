@@ -73,6 +73,7 @@ class Program
                 Swrite("ai goes here..."); //todo: fix ai
                 playerturn = !playerturn;
             }
+            wincheck();
         }
         
         void fielddraw()
@@ -110,6 +111,86 @@ class Program
             });
             t.Wait();
             Write("\n");
+        }
+
+        int Playerrowwincheck(int row)
+        {
+            int Xinrow = 0;
+            int Oinrow = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                if (field[i, row] == 'X') { Xinrow++; }
+                else if (field[i, row] == 'O') { Oinrow++; }
+            }
+            if (Xinrow == 3) { return 1; }
+            if (Oinrow == 3) { return -1; }
+            return 0;
+        }
+
+        int Playercolwincheck(int col)
+        {
+            int Xincol = 0;
+            int Oincol = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                if (field[col, i] == 'X') { Xincol++; }
+                else if (field[col, i] == 'O') { Oincol++; }
+            }
+            if (Xincol == 3) { return 1; }
+            if (Oincol == 3) { return -1; }
+            return 0;
+        }
+
+        int Playerdiagonalwincheck()
+        {
+            int xindiag = 0;
+            int oindiag = 0;
+            for (int i = 0; i < 3; i++) //left to right
+            {
+                if (field[i, i] == 'X') { xindiag++; }
+                if (field[i, i] == 'O') { oindiag++; }
+            }
+            if (xindiag == 3) { return 1; }
+            if (oindiag == 3) { return -1; }
+
+            //reset counts
+            xindiag = 0; 
+            oindiag = 0;
+            for (int i = 2; i > -1; i--)
+            {
+                if (field[i, 2 - i] == 'X')
+                {
+                    xindiag++;
+                }
+
+                if (field[i, 2 - i] == 'O')
+                {
+                    oindiag++;
+                }
+            }
+            if (xindiag == 3) { return 1; }
+            if (oindiag == 3) { return -1; }
+            return 0;
+        }
+
+        void wincheck()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if (Playerrowwincheck(i) == 1 || Playercolwincheck(i) == 1 || Playerdiagonalwincheck()==1)
+                {
+                    fielddraw();
+                    Swrite("congratulations, human. you've won. that means i didn't write this ai properly.");
+                    gameactive = false;
+                }
+
+                if (Playerrowwincheck(i) == -1 || Playercolwincheck(i) == -1 || Playerdiagonalwincheck() == -1)
+                {
+                    fielddraw();
+                    Swrite("you lose. this means the ai works as it should.");
+                    gameactive = false;
+                }
+            }
         }
 
     }
