@@ -1,6 +1,5 @@
 ﻿using static System.Console;
 
-//print speed variables in milliseconds
 
 namespace minimaxttt;
 
@@ -8,7 +7,7 @@ class Program
 {
     public static void Main(string[] args)
     {
-        //configure for different text speed.
+        //configure for different text speed in milliseconds.
         int letterspeed = 1;
         int spacespeed = 5;
         
@@ -17,6 +16,7 @@ class Program
         bool gameactive;
         int coinflip = random.Next(0,2);
         int playerchoice;
+        int turnsfordraw=0;
         
         char[,] field = new char[3, 3]; //note: this is the 'raw' field status.
         
@@ -66,12 +66,22 @@ class Program
                 {
                     field[playerrow, playerbox] = 'X';
                     playerturn = !playerturn; //end turn
+                    turnsfordraw++;
+
                 }
             }
             else
             { 
                 Swrite("ai goes here..."); //todo: fix ai
                 playerturn = !playerturn;
+                turnsfordraw++;
+            }
+            
+            Swrite("turn "+turnsfordraw+" ended. checking for wins and draws...");
+            if (turnsfordraw >= 9)
+            {
+                gameactive = false;
+                Swrite("it would seem the game is a draw. if this is incorrect, contact the developer.");
             }
             wincheck();
         }
