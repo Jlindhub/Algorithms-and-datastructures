@@ -3,205 +3,176 @@
 
 namespace minimaxttt;
 
-class Program
+static class Program
 {
     public static void Main(string[] args)
     {
-        //configure for different text speed in milliseconds.
-        int letterspeed = 1;
-        int spacespeed = 5;
-        
-        Random random = new Random();
-        bool playerturn;
-        bool gameactive;
-        int coinflip = random.Next(0,2);
-        int playerchoice;
-        int turnsfordraw=0;
-        
-        char[,] field = new char[3, 3]; //note: this is the 'raw' field status.
-        
-        Swrite("Welcome to the tictactoe minimax in-progress. here's where i'll maybe do something.");
-        Swrite("the player will be represented by x-es, the computer by o-s.");
-        Swrite("Please select 0 or 1 for the binary flip to determine starting player.");
-        playerchoice = Convert.ToInt32(ReadLine());
-        while(playerchoice != 1 && playerchoice != 0)
+        var node = Node.Initial;
+        WriteLine(node);
+        bool maximizing = true;
+        while (!node.IsTerminal)//turn loop, basically
         {
-            Swrite("invalid input, please try again. 1 or 0.");
-            playerchoice = Convert.ToInt32(ReadLine());
-        }
-        Swrite("and the result is... " + coinflip);
-        if (coinflip == playerchoice) { playerturn=true; Swrite("seems you were right. the player will begin."); }
-        else { playerturn = false; Swrite("seems you were wrong. how unfortunate. the computer will begin.");}
-
-
-        playerturn = true; //debug statement to force player start
-        gameactive = true;
-        while (gameactive)
-        {
-            Swrite("current board state:");
-            fielddraw();
-            if (playerturn)
+            if (node.CurrentChar == 'O')
             {
-                Swrite("please input a row. (1-2-3).");
-                int playerrow = Convert.ToInt32(ReadLine());
-                while (playerrow < 1 || playerrow > 3)
+                //todo: playerturnlogic
+                //check for occupied
+                //if not occupied continue, if occupied try again
+                node = node.CreateSuccessor(0, 0);
+            }
+            else
+            {
+                node = AiBrain.minimax(node, maximizing).Node;
+            }
+
+            WriteLine(node);
+            maximizing = !maximizing;
+        }
+
+        if(node.Score==0){}//draw here
+        else if(node.Score>0){}//X win
+        else {} //O win
+
+        return;
+
+
+        //configure for different text speed in milliseconds.
+        int letterSpeed = 1;
+        int spaceSpeed = 5;
+
+        Random random = new Random();
+        bool playerTurn;
+        int coinFlip = random.Next(0, 2);
+        int turnsForDraw = 0;
+
+        char[,] field = new char[3, 3]; //note: this is the 'raw' field status.
+
+        SWrite("Welcome to the tic-tac-toe minimax in-progress. here's where i'll maybe do something.");
+        SWrite("the player will be represented by x-es, the computer by o-s.");
+        SWrite("Please select 0 or 1 for the binary flip to determine starting player.");
+        var playerChoice = Convert.ToInt32(ReadLine());
+        while (playerChoice != 1 && playerChoice != 0)
+        {
+            SWrite("invalid input, please try again. 1 or 0.");
+            playerChoice = Convert.ToInt32(ReadLine());
+        }
+
+        SWrite("and the result is... " + coinFlip);
+        if (coinFlip == playerChoice)
+        {
+            playerTurn = true;
+            SWrite("seems you were right. the player will begin.");
+        }
+        else
+        {
+            playerTurn = false;
+            SWrite("seems you were wrong. how unfortunate. the computer will begin.");
+        }
+
+
+        playerTurn = true; //debug statement to force player start
+        var gameActive = true;
+        while (gameActive)
+        {
+            SWrite("current board state:");
+            DrawField();
+            if (playerTurn)
+            {
+                SWrite("please input a row. (1-2-3).");
+                int playerRow = Convert.ToInt32(ReadLine());
+                while (playerRow < 1 || playerRow > 3)
                 {
-                    Swrite("invalid input, please try again. 1-2-3.");
-                    playerrow = Convert.ToInt32(ReadLine());
+                    SWrite("invalid input, please try again. 1-2-3.");
+                    playerRow = Convert.ToInt32(ReadLine());
                 }
-                playerrow--; //to match 'field' variable
-                Swrite("please select which box you want.");
-                int playerbox = Convert.ToInt32(ReadLine());
-                while (playerbox < 1 || playerbox > 3)
+
+                playerRow--; //to match 'field' variable
+                SWrite("please select which box you want.");
+                int playerBox = Convert.ToInt32(ReadLine());
+                while (playerBox < 1 || playerBox > 3)
                 {
-                    Swrite("invalid input, please try again. 1-2-3.");
-                    playerbox = Convert.ToInt32(ReadLine());
+                    SWrite("invalid input, please try again. 1-2-3.");
+                    playerBox = Convert.ToInt32(ReadLine());
                 }
-                playerbox--;
-                if (occupiedcheck(playerrow, playerbox))
+
+                playerBox--;
+                if (OccupiedCheck(playerRow, playerBox))
                 {
-                    Swrite("position occupied, please try again.");
+                    SWrite("position occupied, please try again.");
                 }
                 else
                 {
-                    field[playerrow, playerbox] = 'X';
-                    playerturn = !playerturn; //end turn
-                    turnsfordraw++;
-
+                    field[playerRow, playerBox] = 'X';
+                    playerTurn = !playerTurn; //end turn
+                    turnsForDraw++;
                 }
             }
             else
-            { 
-                Swrite("ai goes here..."); //todo: fix ai
-                playerturn = !playerturn;
-                turnsfordraw++;
-            }
-            
-            Swrite("turn "+turnsfordraw+" ended. checking for wins and draws...");
-            if (turnsfordraw >= 9)
             {
-                gameactive = false;
-                Swrite("it would seem the game is a draw. if this is incorrect, contact the developer.");
+                SWrite("ai goes here..."); //todo: fix ai
+                playerTurn = !playerTurn;
+                turnsForDraw++;
             }
-            wincheck();
-        }
-        
-        void fielddraw()
-        {
-            for (int i = 0; i < field.GetLength(1); i++)
+
+            SWrite("turn " + turnsForDraw + " ended. checking for wins and draws...");
+            if (turnsForDraw >= 9)
             {
-                WriteLine("row " + (i+1) + " " + field[i, 0] + " | " + field[i, 1] + " | " + field[i, 2]);
-                if (i<2) //ensures that only 2 horizontals are drawn - without you get 3.
-                {
-                    WriteLine("      - + - + -");
-                }
+                gameActive = false;
+                SWrite("it would seem the game is a draw. if this is incorrect, contact the developer.");
             }
+
+            WinCheck();
         }
-        bool occupiedcheck(int posone, int postwo)
+
+        bool OccupiedCheck(int posOne, int posTwo)
         {
-            if (field[posone, postwo] == '\0') { return false; }
+            if (field[posOne, posTwo] == '\0')
+            {
+                return false;
+            }
+
             return true;
         }
-        
+
         //slow-write method. purely aesthetic.
-        void Swrite(string text) {
-            string[] splitform = text.Split((' '));
+        void SWrite(string text)
+        {
+            string[] splitForm = text.Split((' '));
             Task t = Task.Run(() =>
             {
-                foreach (string part in splitform)
+                foreach (string part in splitForm)
                 {
                     foreach (char letter in part)
                     {
                         Write(letter);
-                        Thread.Sleep(letterspeed);
+                        Thread.Sleep(letterSpeed);
                     }
+
                     Write(" ");
-                    Thread.Sleep(spacespeed);
+                    Thread.Sleep(spaceSpeed);
                 }
             });
             t.Wait();
             Write("\n");
         }
 
-        int Playerrowwincheck(int row)
-        {
-            int Xinrow = 0;
-            int Oinrow = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                if (field[i, row] == 'X') { Xinrow++; }
-                else if (field[i, row] == 'O') { Oinrow++; }
-            }
-            if (Xinrow == 3) { return 1; }
-            if (Oinrow == 3) { return -1; }
-            return 0;
-        }
-
-        int Playercolwincheck(int col)
-        {
-            int Xincol = 0;
-            int Oincol = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                if (field[col, i] == 'X') { Xincol++; }
-                else if (field[col, i] == 'O') { Oincol++; }
-            }
-            if (Xincol == 3) { return 1; }
-            if (Oincol == 3) { return -1; }
-            return 0;
-        }
-
-        int Playerdiagonalwincheck()
-        {
-            int xindiag = 0;
-            int oindiag = 0;
-            for (int i = 0; i < 3; i++) //left to right
-            {
-                if (field[i, i] == 'X') { xindiag++; }
-                if (field[i, i] == 'O') { oindiag++; }
-            }
-            if (xindiag == 3) { return 1; }
-            if (oindiag == 3) { return -1; }
-
-            //reset counts
-            xindiag = 0; 
-            oindiag = 0;
-            for (int i = 2; i > -1; i--)
-            {
-                if (field[i, 2 - i] == 'X')
-                {
-                    xindiag++;
-                }
-
-                if (field[i, 2 - i] == 'O')
-                {
-                    oindiag++;
-                }
-            }
-            if (xindiag == 3) { return 1; }
-            if (oindiag == 3) { return -1; }
-            return 0;
-        }
-
-        void wincheck()
+        void WinCheck()
         {
             for (int i = 0; i < 3; i++)
             {
-                if (Playerrowwincheck(i) == 1 || Playercolwincheck(i) == 1 || Playerdiagonalwincheck()==1)
+                if (PlayerRowWinCheck(i) == 1 || PlayerColWinCheck(i) == 1 || PlayerDiagonalWinCheck() == 1)
                 {
-                    fielddraw();
-                    Swrite("congratulations, human. you've won. that means i didn't write this ai properly.");
-                    gameactive = false;
+                    DrawField();
+                    SWrite("congratulations, you've won. that means i didn't write this ai properly.");
+                    gameActive = false;
                 }
 
-                if (Playerrowwincheck(i) == -1 || Playercolwincheck(i) == -1 || Playerdiagonalwincheck() == -1)
+                if (PlayerRowWinCheck(i) == -1 || PlayerColWinCheck(i) == -1 || PlayerDiagonalWinCheck() == -1)
                 {
-                    fielddraw();
-                    Swrite("you lose. this means the ai works as it should.");
-                    gameactive = false;
+                    DrawField();
+                    SWrite("you lose. this means the ai works as it should.");
+                    gameActive = false;
                 }
             }
         }
-
     }
 }
