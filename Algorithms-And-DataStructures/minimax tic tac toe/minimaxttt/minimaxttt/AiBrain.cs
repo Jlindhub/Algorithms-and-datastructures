@@ -8,7 +8,7 @@ public struct NodeScore
 
 public class Node
 {
-    char[,] field;
+    public char[,] field;
     public static Node Initial => new Node() { field = new char[3, 3] };
 
     public bool IsTerminal
