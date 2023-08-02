@@ -67,7 +67,8 @@ static class Program
         {
             SWrite("you have somehow done the impossible, or outright cheated. please contact the developer.");
         }
-
+        SWrite("\ninput any key to terminate the program.");
+        Console.ReadKey();
         return;
         
         bool OccupiedCheck(int posOne, int posTwo)
